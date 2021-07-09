@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History
+    </title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+  <!--NAV BAR starts here-->
+
+  <div class="topnav">
+    <a class="live" href="#home">Simple Banking System</a>
+    <a href="./index.html">Home</a>
+    <a class="active" href="./customer.html">View Customers</a>
+
+   
+  </div>
+
+  <!--NAV BAR ends here-->
+
+  <!-- Transfer History starts here -->
+  <div class="table"> 
+    <table id="list">
+      <th>From</th>
+      <th>To</th>
+      <th>Transferred Amount</th>
+     <br>
+    </table>
+    
+  </div>
+
+  <!-- Transfer History ends here -->
+
+  <!-- firebase config starts here -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCVW6Cb7U2KmIKfl228vBjHE6VSygROvUE",
+      authDomain: "spark-873cf.firebaseapp.com",
+      projectId: "spark-873cf",
+      storageBucket: "spark-873cf.appspot.com",
+      messagingSenderId: "194075097905",
+      appId: "1:194075097905:web:67ccfdfbee4ddac998ce10"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true});
+  </script>
+
+  <!-- firebase config ends here -->
+
+  <script src="./asset/JS/transaction.js"></script>
+</body>
+</html>
